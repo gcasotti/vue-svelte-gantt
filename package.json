@@ -1,6 +1,6 @@
 {
   "name": "vue-svelte-gantt",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Vue 3 wrapper component for svelte-gantt – interactive Gantt chart / resource booking",
   "type": "module",
   "license": "MIT",
