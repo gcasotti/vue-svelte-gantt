@@ -17,8 +17,6 @@ Vue 3 wrapper for [svelte-gantt](https://github.com/ANovokmet/svelte-gantt) — 
 [![Bundle Size](https://img.shields.io/bundlephobia/minzip/vue-svelte-gantt?v=1)](https://bundlephobia.com/package/vue-svelte-gantt)
 [![Types](https://img.shields.io/npm/types/vue-svelte-gantt?v=1)](https://www.npmjs.com/package/vue-svelte-gantt)
 
-[![CI](https://img.shields.io/github/actions/workflow/status/gcasotti/vue-svelte-gantt/test.yml?v=1)](https://github.com/gcasotti/vue-svelte-gantt/actions)
-
 [![Demo](https://img.shields.io/badge/demo-live-blue?v=1)](https://gcasotti.github.io/vue-svelte-gantt/)
 
 
