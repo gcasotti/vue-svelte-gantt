@@ -1,0 +1,51 @@
+{
+  "name": "vue-svelte-gantt",
+  "version": "0.1.0",
+  "description": "Vue 3 wrapper component for svelte-gantt – interactive Gantt chart / resource booking",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "gcasotti",
+    "url": "https://github.com/gcasotti"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gcasotti/vue-svelte-gantt.git"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "gantt",
+    "svelte-gantt",
+    "gantt-chart",
+    "resource-booking",
+    "scheduling"
+  ],
+  "main": "./dist/vue-svelte-gantt.js",
+  "module": "./dist/vue-svelte-gantt.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-svelte-gantt.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "vue": ">=3.3.0",
+    "svelte-gantt": ">=4.0.0"
+  },
+  "devDependencies": {
+    "svelte-gantt": "^4.5.0",
+    "typescript": "^5.5.0",
+    "vite": "^6.2.0",
+    "vite-plugin-dts": "^4.5.0",
+    "vue": "^3.5.0"
+  }
+}
