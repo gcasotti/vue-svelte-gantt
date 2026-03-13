@@ -2,6 +2,26 @@
 
 Vue 3 wrapper for [svelte-gantt](https://github.com/ANovokmet/svelte-gantt) — a lightweight, high-performance interactive Gantt chart / resource booking component.
 
+**Live Demo**: https://gcasotti.github.io/vue-svelte-gantt
+
+**Repository**: https://github.com/gcasotti/vue-svelte-gantt
+
+[![NPM Version](https://img.shields.io/npm/v/vue-svelte-gantt?v=1)](https://www.npmjs.com/package/vue-svelte-gantt)
+[![NPM Downloads](https://img.shields.io/npm/dm/vue-svelte-gantt?v=1)](https://www.npmjs.com/package/vue-svelte-gantt)
+[![NPM License](https://img.shields.io/npm/l/vue-svelte-gantt?v=1)](https://www.npmjs.com/package/vue-svelte-gantt)
+
+[![GitHub Repo](https://img.shields.io/badge/github-repository-blue?v=1)](https://github.com/gcasotti/vue-svelte-gantt)
+[![GitHub Stars](https://img.shields.io/github/stars/gcasotti/vue-svelte-gantt?v=1)](https://github.com/gcasotti/vue-svelte-gantt/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/gcasotti/vue-svelte-gantt?v=1)](https://github.com/gcasotti/vue-svelte-gantt/issues)
+
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/vue-svelte-gantt?v=1)](https://bundlephobia.com/package/vue-svelte-gantt)
+[![Types](https://img.shields.io/npm/types/vue-svelte-gantt?v=1)](https://www.npmjs.com/package/vue-svelte-gantt)
+
+[![CI](https://img.shields.io/github/actions/workflow/status/gcasotti/vue-svelte-gantt/test.yml?v=1)](https://github.com/gcasotti/vue-svelte-gantt/actions)
+
+[![Demo](https://img.shields.io/badge/demo-live-blue?v=1)](https://gcasotti.github.io/vue-svelte-gantt/)
+
+
 > **No Svelte build tooling required.** This package uses the pre-compiled svelte-gantt bundle via its imperative API.
 
 ## Installation
