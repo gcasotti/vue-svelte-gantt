@@ -262,16 +262,20 @@ export const SvelteGanttChart = defineComponent({
     });
 
     /* ---- watch props → $set ---------------------------------------- */
+    /* Each prop gets its own watcher so that changing one prop (e.g.     */
+    /* `layout`) does NOT reset svelte-gantt's internal state for other   */
+    /* props (e.g. task positions after drag/resize).                     */
 
-    watch(
-      () => GANTT_PROP_KEYS.map((k) => props[k]),
-      () => {
-        if (!ganttInstance) return;
-        const svelteProps = collectProps();
-        (ganttInstance as any).$set(svelteProps);
-      },
-      { deep: true },
-    );
+    for (const key of GANTT_PROP_KEYS) {
+      watch(
+        () => props[key as keyof typeof props],
+        (newVal) => {
+          if (!ganttInstance || newVal === undefined) return;
+          (ganttInstance as any).$set({ [key]: rawClone(newVal) });
+        },
+        { deep: true },
+      );
+    }
 
     /* ---- unmount ---------------------------------------------------- */
 
