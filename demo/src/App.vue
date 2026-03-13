@@ -113,17 +113,15 @@ function clearLog() {
   <div class="app">
     <!-- Header -->
     <header class="hero">
-      <div class="hero-content">
-        <h1>vue-svelte-gantt</h1>
-        <p class="subtitle">Vue 3 wrapper for <a href="https://github.com/ANovokmet/svelte-gantt" target="_blank" rel="noopener">svelte-gantt</a></p>
-        <div class="badges">
-          <a href="https://www.npmjs.com/package/vue-svelte-gantt" target="_blank" rel="noopener">
-            <img src="https://img.shields.io/npm/v/vue-svelte-gantt?style=flat-square&color=4fc08d" alt="npm version" />
-          </a>
-          <a href="https://github.com/gcasotti/vue-svelte-gantt" target="_blank" rel="noopener">
-            <img src="https://img.shields.io/badge/GitHub-repo-24292e?style=flat-square&logo=github" alt="GitHub" />
-          </a>
-        </div>
+      <h1>vue-svelte-gantt</h1>
+      <p class="subtitle">Vue 3 wrapper for <a href="https://github.com/ANovokmet/svelte-gantt" target="_blank" rel="noopener">svelte-gantt</a></p>
+      <div class="badges">
+        <a href="https://www.npmjs.com/package/vue-svelte-gantt" target="_blank" rel="noopener">
+          <img src="https://img.shields.io/npm/v/vue-svelte-gantt?style=flat-square&color=4fc08d" alt="npm version" />
+        </a>
+        <a href="https://github.com/gcasotti/vue-svelte-gantt" target="_blank" rel="noopener">
+          <img src="https://img.shields.io/badge/GitHub-repo-24292e?style=flat-square&logo=github" alt="GitHub" />
+        </a>
       </div>
     </header>
 
@@ -210,28 +208,18 @@ function clearLog() {
 
     <!-- Footer -->
     <footer class="footer">
-      <p>
-        Built with
-        <a href="https://vuejs.org" target="_blank" rel="noopener">Vue 3</a>
-        +
-        <a href="https://github.com/ANovokmet/svelte-gantt" target="_blank" rel="noopener">svelte-gantt</a>
-      </p>
+      Built with
+      <a href="https://vuejs.org" target="_blank" rel="noopener">Vue 3</a>
+      +
+      <a href="https://github.com/ANovokmet/svelte-gantt" target="_blank" rel="noopener">svelte-gantt</a>
     </footer>
   </div>
 </template>
 
 <style>
 /* ------------------------------------------------------------------ */
-/*  Reset & Base                                                       */
+/*  Base (no aggressive resets)                                        */
 /* ------------------------------------------------------------------ */
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 :root {
   --bg: #e8ecf2;
@@ -242,6 +230,11 @@ function clearLog() {
   --accent: #4f68e8;
   --radius: 12px;
   --font: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -287,10 +280,11 @@ a:hover {
   font-weight: 700;
   letter-spacing: -0.03em;
   color: var(--text);
+  margin: 0;
 }
 
 .subtitle {
-  margin-top: 6px;
+  margin: 6px 0 0;
   color: var(--text-muted);
   font-size: 1rem;
 }
@@ -339,7 +333,6 @@ a:hover {
 
 .btn-group {
   display: flex;
-  gap: 0;
 }
 
 .btn-group .btn {
@@ -384,7 +377,7 @@ a:hover {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Gantt section — let svelte-gantt own its styles                     */
+/*  Gantt section                                                      */
 /* ------------------------------------------------------------------ */
 
 .gantt-section {
@@ -395,8 +388,12 @@ a:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-/* Minimal overrides — only task colors */
-:deep(.task-lunch) {
+/* ------------------------------------------------------------------ */
+/*  Task color customizations                                          */
+/*  These override the default .sg-task-default blue                   */
+/* ------------------------------------------------------------------ */
+
+.task-lunch {
   background: repeating-linear-gradient(
     45deg,
     #fca5a5,
@@ -404,39 +401,22 @@ a:hover {
     #ffffff 4px,
     #ffffff 8px
   ) !important;
-  border: none !important;
-}
-:deep(.task-lunch .sg-task-content) {
   color: #ef4444 !important;
 }
 
-:deep(.task-pink) {
+.task-pink {
   background: #ec4899 !important;
-  border: none !important;
-}
-:deep(.task-pink .sg-task-content) {
   color: #fff !important;
 }
 
-:deep(.task-blue) {
+.task-blue {
   background: #3b82f6 !important;
-  border: none !important;
-}
-:deep(.task-blue .sg-task-content) {
   color: #fff !important;
 }
 
-:deep(.task-gray) {
+.task-gray {
   background: #9ca3af !important;
-  border: none !important;
-}
-:deep(.task-gray .sg-task-content) {
   color: #fff !important;
-}
-
-:deep(.sg-task) {
-  border-radius: 4px !important;
-  font-size: 0.8rem !important;
 }
 
 /* ------------------------------------------------------------------ */
@@ -466,6 +446,7 @@ a:hover {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-muted);
+  margin: 0;
 }
 
 .log-body {
